@@ -9,23 +9,23 @@ esphome:
   board: d1_mini
 
 wifi:
-# Set your WiFi parameters
-  ssid: "xxxxxxxx"
-  password: "yyyyyyyy"
+# EDIT HERE: SSID and PASSWORD: Set your WiFi name and password
+  ssid: "ssid"
+  password: "pw"
 
   manual_ip:
 # Mitsurunner's IP address
-    static_ip: 192.168.1.100 
+    static_ip: 192.168.1.100
     subnet: 255.255.255.0
     gateway: 192.168.1.1
 
 # Logs on
 logger:
 
-# OtA-update password
+# EDIT HERE: PASSWORD: Choose and fill in secure OtA update password
 ota:
   - platform: esphome
-    password: "zzzzzzzz"
+    password: "0tapazzzwordz"
 
 # Dallas PIN, change PIN if needed
 one_wire:
@@ -47,7 +47,7 @@ light:
       inverted: True
     name: "Status led"
 
-# Turn relay ON/OFF
+# Switch relay on and off
 interval:
   - interval: 10s
     then:
