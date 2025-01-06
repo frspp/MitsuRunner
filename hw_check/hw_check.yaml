@@ -1,6 +1,6 @@
-# For Mitsurunnwer HW-verification
-# Shows IDs of connected Dallas sensors
-# Switches relay: 1sec on, 4sec off
+# Verify Mitsurunner hardware: 
+# Shows IDs of connected Dallas temperature sensors in Esphome window after succefull run, write these down.
+# Tests relay, switches on and off: 1sec on, 10sec off
 
 esphome:
   name: mitsurunner-hw-check  
@@ -49,8 +49,7 @@ light:
 
 # Turn relay ON/OFF
 interval:
-  - interval: 5s
-
+  - interval: 10s
     then:
       - switch.turn_on: gpio_rele
       - delay: 0.5s
