@@ -24,11 +24,13 @@ logger:
 
 # OtA-update password
 ota:
-  password: "zzzzzzzz"
+  - platform: esphome
+    password: "zzzzzzzz"
 
 # Dallas PIN, change PIN if needed
-dallas:
-  - pin: D5
+one_wire:
+  - platform: gpio
+    pin: D5
     update_interval: 10s
     id: dallas1
 
@@ -39,10 +41,11 @@ switch:
     name: "rele"
     id: gpio_rele
 
-status_led:
-  pin:
-    number: D4
-    inverted: True
+light:
+  - platform: status_led
+    pin:
+      number: D4
+      inverted: True
 
 # Turn relay ON/OFF
 interval:
