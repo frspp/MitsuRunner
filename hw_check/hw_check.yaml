@@ -45,6 +45,7 @@ light:
     pin:
       number: D4
       inverted: True
+    name: "Status led"
 
 # Turn relay ON/OFF
 interval:
